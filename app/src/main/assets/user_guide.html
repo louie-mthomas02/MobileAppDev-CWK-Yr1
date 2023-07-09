@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="user_guide.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    </head>
+    <body style="margin:1em">
+
+        <h1 id="guide_heading" class="display-2" style="padding-top:0.25em; padding-bottom:0.25em;">Application User Guide</h1>
+
+        <div id="summary">
+            <h6>Summary:</h6>
+
+            <div>
+                The Food Inventory Helper application aims to solve the problem of developing out-of-date food in your fridge.
+                By entering and maintaining the locally stored inventory, the user is presented with delicious recipes to make from the <i>Spoonacular API</i>.
+                Upon cooking the meal, the user can press a button to be redirected to the main activity ready for next use.
+                In addition, further functionality like a <i>timer</i> to keep track of cooking times, and <i>nutrition limit</i> are provided to make the experience as convenient
+                and bespoke for the user.
+            </div>
+            <br>
+            <div>
+                <i>All functionality has been tested on a physical OnePlus 7 Pro phone running Android version 11.</i>
+            </div>
+        </div>
+
+        <h2>Recipes Panel</h2>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/recipesBrowse.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>Browse Recipe</b> panel allows the user to navigate the suggested meals from the <i>Spoonacular API</i>. Upon tapping on a tile, the user is taken to the below activity to view the recipe in further detail.
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/recipeDetails.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>View Recipe</b> Activity enables the user to view the previously selected recipe in further detail. Such information involves: the ingredients required, the recipe's instructions, a summary of the recipe and nutritional info. Upon cooking the dish, the user can press the <i>'Cooked!'</i> to get redirected to the main activity.
+            </div>
+        </div>
+
+        <h2>Inventory Panel</h2>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/invPhoto.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>Inventory</b> Fragment enable the user to view and edit the contents of their inventory at ease by scrolling vertically. To add an ingredient, tap the <b>+</b> button in the lower right hand corner. To edit the quantity/remove an item, tap the appropriate ingredient.
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/addAnItem.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>Add Item</b> Activity is the screen the user is taken to by pressing the aforementioned <b>+</b> button. Here, the user can enter an item's name, the numeric quantity of said item as well as if the item is measured in either grams or millilitres. When pressing the <i>'Add Item'</i> button, the user is taken back to the updated <b>Inventory</b> panel.
+            </div>
+        </div>
+
+        <h2>Timer Panel</h2>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/timerPhoto.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>Timer</b> Fragment allows the user to enter a desired length of time in the format <i>hours : minutes : seconds</i>. When pressing <i>'Start Timer'</i>, the fields become uneditable and will countdown to 0. Upon reaching zero, a notification is sent alerting th euser to the expired timer. The timer can be halted and reset at any time during operation by pressing the <i>'Reset Timer'</i> button.
+            </div>
+        </div>
+
+        <h2>Settings</h2>
+
+        <div class="box">
+            <div class="left">
+                <img src="photos/settingsPhoto.jpg" width="100%" height="100%">
+            </div>
+
+            <div class="right">
+                The <b>Settings</b> screen enables the user to customise their experience with the app by setting certain limits on nutritional content such as: calories, protein, sodium and carbohydrates. These are edited by a 2-handle slier ditacting the minimum and maximum values plus a checkbox to enable/disable the individual limits. If needed, a reset button is supplied to return all values to original settings.
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

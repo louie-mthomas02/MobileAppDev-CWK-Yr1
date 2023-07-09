@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Food Inventory Helper</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_title">Settings</string>
+    <string name="browse_recipes_title">Recipes</string>
+    <string name="inventory_title">Inventory</string>
+    <string name="set_limits">Set Limits:</string>
+    <string name="other_label">Other:</string>
+    <string name="kcal_label">Calories (kcal):</string>
+    <string name="protein_label">Protein (grams):</string>
+    <string name="sodium_label">Sodium (mg):</string>
+    <string name="carb_label">Carbohydrates (grams):</string>
+    <string name="vegLabel">Show Only Vegetarian Recipes?</string>
+    <string name="glutenLabel">Gluten-Free?</string>
+    <string name="lactoseLabel">Lactose-Intolerant?</string>
+    <string name="resetBtnText">Reset to Default Values</string>
+
+    <string-array name="units">
+        <item>g</item>
+        <item>ml</item>
+    </string-array>
+</resources>

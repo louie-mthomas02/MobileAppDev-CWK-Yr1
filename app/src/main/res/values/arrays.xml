@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="kcal_slider_values">
+        <item>2000</item>
+        <item>2500</item>
+    </array>
+    <array name="protein_slider_values">
+        <item>17</item>
+        <item>30</item>
+    </array>
+    <array name="sodium_slider_values">
+        <item>250</item>
+        <item>500</item>
+    </array>
+    <array name="carb_slider_values">
+        <item>60</item>
+        <item>75</item>
+    </array>
+</resources>

@@ -1,0 +1,38 @@
+#guide_heading {
+    text-align: center;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+.box {
+    display:flex;
+    border: solid lightGrey 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+.left {
+    border-right: solid lightGrey 1px;
+    width: 40%;
+    float:left;
+}
+
+.right {
+    padding: 0.5em;
+    width: 60%;
+    float:right;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: solid grey 1px;
+    border-bottom: solid grey 1px;
+}
+
+#summary {
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}

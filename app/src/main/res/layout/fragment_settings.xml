@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment" >
+
+    <TextView
+        android:id="@+id/settings_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/settings_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:gravity="center_vertical"/>
+
+    <View
+        android:id="@+id/headerSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/settings_header"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@+id/headerSeparator"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/vegOnlyCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vegLabel"
+                android:buttonTint="#4CAF50"/>
+
+            <CheckBox
+                android:id="@+id/glutenFreeCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/glutenLabel"
+                android:buttonTint="#4CAF50"/>
+
+            <CheckBox
+                android:id="@+id/lactoseIntolerantCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lactoseLabel"
+                android:buttonTint="#4CAF50"/>
+
+            <TextView
+                android:id="@+id/set_limits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/set_limits"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/set_limits_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/kcalLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/kcal_label"
+                    android:textColor="#000000"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@+id/kcalRangeSlider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/enable_kcal_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/kcalRangeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="1800.0"
+                    android:valueTo="3000.0"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_kcal_range"
+                    app:values="@array/kcal_slider_values" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/protein_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/protein_label"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toTopOf="@+id/protein_range_slider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/enable_protein_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:buttonTint="#4CAF50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/protein_range_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="15"
+                    android:valueTo="50"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_protein_range"
+                    app:values="@array/protein_slider_values" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sodiumLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/sodium_label"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toTopOf="@+id/sodiumRangeSlider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/enable_sodium_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:buttonTint="#4CAF50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/sodiumRangeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="100.0"
+                    android:valueTo="1000.0"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_sodium_range"
+                    app:values="@array/sodium_slider_values" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/carbLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/carb_label"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toTopOf="@+id/carbRangeSlider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/enable_carb_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:buttonTint="#4CAF50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/carbRangeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="30"
+                    android:valueTo="80"
+                    app:layout_constraintTop_toBottomOf="@+id/enable_carb_range"
+                    app:values="@array/carb_slider_values" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/other_label"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+
+                android:gravity="center_vertical"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <Button
+                android:id="@+id/resetBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resetBtnText"
+                android:backgroundTint="#A60000"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/userGuideBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Guide"
+                android:backgroundTint="#00B2DF"
+                android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
